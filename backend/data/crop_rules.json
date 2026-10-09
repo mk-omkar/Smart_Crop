@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "name": "Illustrative crop requirement ranges",
+    "version": "1.0",
+    "description": "Approximate climate requirements used by the weather-only (rule-based) recommendation mode.",
+    "disclaimer": "These ranges are illustrative values compiled from general agronomic knowledge for a college demonstration. They are NOT derived from the Kaggle dataset, are not authoritative, and vary by variety, region and management. Edit this file to match your local agricultural guidance.",
+    "units": {
+      "temperature": "°C (mean temperature during the growing period)",
+      "humidity": "% (mean relative humidity)",
+      "rainfall": "mm per month (average during the growing period)"
+    },
+    "range_fields": {
+      "min": "below this the crop is considered unsuitable",
+      "optimal_min": "start of the comfortable range",
+      "optimal_max": "end of the comfortable range",
+      "max": "above this the crop is considered unsuitable"
+    },
+    "weights": { "temperature": 0.4, "humidity": 0.2, "rainfall": 0.4 },
+    "seasons_note": "Season names follow the Indian convention: kharif (monsoon, ~Jun–Oct), rabi (winter, ~Nov–Mar), zaid (summer, ~Mar–Jun). 'perennial' crops pass any season filter."
+  },
+  "crops": {
+    "rice": {
+      "display_name": "Rice", "seasons": ["kharif"],
+      "temperature": { "min": 18, "optimal_min": 22, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 60, "optimal_min": 70, "optimal_max": 90, "max": 100 },
+      "rainfall": { "min": 100, "optimal_min": 150, "optimal_max": 300, "max": 400 },
+      "notes": "Needs warm, humid conditions and plenty of water or irrigation."
+    },
+    "maize": {
+      "display_name": "Maize", "seasons": ["kharif", "rabi"],
+      "temperature": { "min": 15, "optimal_min": 21, "optimal_max": 30, "max": 35 },
+      "humidity": { "min": 40, "optimal_min": 55, "optimal_max": 75, "max": 90 },
+      "rainfall": { "min": 40, "optimal_min": 60, "optimal_max": 150, "max": 250 },
+      "notes": "Adaptable cereal; avoid waterlogging."
+    },
+    "chickpea": {
+      "display_name": "Chickpea", "seasons": ["rabi"],
+      "temperature": { "min": 10, "optimal_min": 15, "optimal_max": 27, "max": 32 },
+      "humidity": { "min": 20, "optimal_min": 30, "optimal_max": 65, "max": 85 },
+      "rainfall": { "min": 10, "optimal_min": 20, "optimal_max": 80, "max": 150 },
+      "notes": "Cool, relatively dry winter crop; sensitive to excess moisture."
+    },
+    "kidneybeans": {
+      "display_name": "Kidney beans", "seasons": ["kharif", "rabi"],
+      "temperature": { "min": 15, "optimal_min": 18, "optimal_max": 27, "max": 32 },
+      "humidity": { "min": 40, "optimal_min": 55, "optimal_max": 80, "max": 92 },
+      "rainfall": { "min": 60, "optimal_min": 80, "optimal_max": 150, "max": 250 },
+      "notes": "Prefers moderate temperatures; heat during flowering reduces pod set."
+    },
+    "pigeonpeas": {
+      "display_name": "Pigeon peas", "seasons": ["kharif"],
+      "temperature": { "min": 18, "optimal_min": 20, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 75, "max": 90 },
+      "rainfall": { "min": 40, "optimal_min": 60, "optimal_max": 160, "max": 250 },
+      "notes": "Drought-tolerant pulse; dislikes waterlogging."
+    },
+    "mothbeans": {
+      "display_name": "Moth beans", "seasons": ["kharif"],
+      "temperature": { "min": 24, "optimal_min": 27, "optimal_max": 35, "max": 42 },
+      "humidity": { "min": 30, "optimal_min": 40, "optimal_max": 65, "max": 80 },
+      "rainfall": { "min": 20, "optimal_min": 30, "optimal_max": 80, "max": 150 },
+      "notes": "Very heat- and drought-tolerant pulse of arid regions."
+    },
+    "mungbean": {
+      "display_name": "Mung bean (green gram)", "seasons": ["kharif", "zaid"],
+      "temperature": { "min": 20, "optimal_min": 25, "optimal_max": 35, "max": 40 },
+      "humidity": { "min": 40, "optimal_min": 55, "optimal_max": 85, "max": 95 },
+      "rainfall": { "min": 30, "optimal_min": 40, "optimal_max": 100, "max": 200 },
+      "notes": "Short-duration warm-season pulse."
+    },
+    "blackgram": {
+      "display_name": "Black gram (urad)", "seasons": ["kharif", "zaid"],
+      "temperature": { "min": 20, "optimal_min": 25, "optimal_max": 35, "max": 40 },
+      "humidity": { "min": 50, "optimal_min": 60, "optimal_max": 90, "max": 100 },
+      "rainfall": { "min": 40, "optimal_min": 50, "optimal_max": 120, "max": 220 },
+      "notes": "Warm, humid conditions; short-duration pulse."
+    },
+    "lentil": {
+      "display_name": "Lentil", "seasons": ["rabi"],
+      "temperature": { "min": 8, "optimal_min": 15, "optimal_max": 25, "max": 30 },
+      "humidity": { "min": 30, "optimal_min": 40, "optimal_max": 70, "max": 85 },
+      "rainfall": { "min": 15, "optimal_min": 25, "optimal_max": 80, "max": 150 },
+      "notes": "Cool-season pulse."
+    },
+    "pomegranate": {
+      "display_name": "Pomegranate", "seasons": ["perennial"],
+      "temperature": { "min": 15, "optimal_min": 25, "optimal_max": 35, "max": 42 },
+      "humidity": { "min": 30, "optimal_min": 40, "optimal_max": 70, "max": 85 },
+      "rainfall": { "min": 20, "optimal_min": 30, "optimal_max": 100, "max": 200 },
+      "notes": "Orchard crop for semi-arid climates; fruit cracks with irregular moisture."
+    },
+    "banana": {
+      "display_name": "Banana", "seasons": ["perennial"],
+      "temperature": { "min": 15, "optimal_min": 22, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 50, "optimal_min": 65, "optimal_max": 90, "max": 100 },
+      "rainfall": { "min": 80, "optimal_min": 100, "optimal_max": 250, "max": 400 },
+      "notes": "Needs warm, humid conditions, steady moisture and wind protection."
+    },
+    "mango": {
+      "display_name": "Mango", "seasons": ["perennial"],
+      "temperature": { "min": 20, "optimal_min": 24, "optimal_max": 35, "max": 42 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 80, "max": 90 },
+      "rainfall": { "min": 30, "optimal_min": 50, "optimal_max": 200, "max": 350 },
+      "notes": "Tropical orchard tree; a dry spell helps flowering."
+    },
+    "grapes": {
+      "display_name": "Grapes", "seasons": ["perennial"],
+      "temperature": { "min": 10, "optimal_min": 15, "optimal_max": 30, "max": 38 },
+      "humidity": { "min": 30, "optimal_min": 40, "optimal_max": 70, "max": 85 },
+      "rainfall": { "min": 20, "optimal_min": 30, "optimal_max": 100, "max": 180 },
+      "notes": "Dry, sunny ripening period; high humidity increases disease."
+    },
+    "watermelon": {
+      "display_name": "Watermelon", "seasons": ["zaid"],
+      "temperature": { "min": 20, "optimal_min": 24, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 75, "max": 90 },
+      "rainfall": { "min": 20, "optimal_min": 30, "optimal_max": 90, "max": 160 },
+      "notes": "Warm-season vine crop; sandy, well-drained soils."
+    },
+    "muskmelon": {
+      "display_name": "Muskmelon", "seasons": ["zaid"],
+      "temperature": { "min": 20, "optimal_min": 24, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 70, "max": 85 },
+      "rainfall": { "min": 15, "optimal_min": 25, "optimal_max": 80, "max": 140 },
+      "notes": "Warm, dry weather improves sweetness."
+    },
+    "apple": {
+      "display_name": "Apple", "seasons": ["perennial"],
+      "temperature": { "min": 5, "optimal_min": 10, "optimal_max": 24, "max": 30 },
+      "humidity": { "min": 40, "optimal_min": 55, "optimal_max": 80, "max": 92 },
+      "rainfall": { "min": 50, "optimal_min": 80, "optimal_max": 150, "max": 250 },
+      "notes": "Temperate fruit that needs winter chilling; mainly cooler highlands."
+    },
+    "orange": {
+      "display_name": "Orange", "seasons": ["perennial"],
+      "temperature": { "min": 12, "optimal_min": 18, "optimal_max": 30, "max": 38 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 80, "max": 90 },
+      "rainfall": { "min": 40, "optimal_min": 60, "optimal_max": 150, "max": 250 },
+      "notes": "Citrus orchard crop; frost sensitive."
+    },
+    "papaya": {
+      "display_name": "Papaya", "seasons": ["perennial"],
+      "temperature": { "min": 18, "optimal_min": 22, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 50, "optimal_min": 60, "optimal_max": 85, "max": 95 },
+      "rainfall": { "min": 60, "optimal_min": 80, "optimal_max": 200, "max": 300 },
+      "notes": "Fast-growing tropical fruit; roots rot in waterlogged soil."
+    },
+    "coconut": {
+      "display_name": "Coconut", "seasons": ["perennial"],
+      "temperature": { "min": 20, "optimal_min": 25, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 60, "optimal_min": 70, "optimal_max": 95, "max": 100 },
+      "rainfall": { "min": 80, "optimal_min": 100, "optimal_max": 250, "max": 350 },
+      "notes": "Humid tropical coastal crop."
+    },
+    "cotton": {
+      "display_name": "Cotton", "seasons": ["kharif"],
+      "temperature": { "min": 18, "optimal_min": 22, "optimal_max": 32, "max": 38 },
+      "humidity": { "min": 40, "optimal_min": 50, "optimal_max": 80, "max": 90 },
+      "rainfall": { "min": 40, "optimal_min": 60, "optimal_max": 130, "max": 220 },
+      "notes": "Warm-season fibre crop; dry weather at boll opening."
+    },
+    "jute": {
+      "display_name": "Jute", "seasons": ["kharif"],
+      "temperature": { "min": 22, "optimal_min": 25, "optimal_max": 35, "max": 40 },
+      "humidity": { "min": 60, "optimal_min": 70, "optimal_max": 92, "max": 100 },
+      "rainfall": { "min": 120, "optimal_min": 150, "optimal_max": 300, "max": 400 },
+      "notes": "Hot, very humid and wet conditions."
+    },
+    "coffee": {
+      "display_name": "Coffee", "seasons": ["perennial"],
+      "temperature": { "min": 15, "optimal_min": 18, "optimal_max": 26, "max": 30 },
+      "humidity": { "min": 50, "optimal_min": 60, "optimal_max": 90, "max": 95 },
+      "rainfall": { "min": 80, "optimal_min": 100, "optimal_max": 250, "max": 350 },
+      "notes": "Shade-grown plantation crop of cool, humid highlands."
+    }
+  }
+}
