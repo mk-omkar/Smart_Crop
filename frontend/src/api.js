@@ -1,6 +1,6 @@
 // All communication with the Flask backend goes through this file (Fetch API).
 
-const API_BASE = (import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/\/+$/, "");
+const API_BASE=(import.meta.env.VITE_API_URL||"https://smart-crop-advisor-backend-e4am.onrender.com").replace(/\/+$/,"");
 const TIMEOUT_MS = 25000; // backend may call two weather endpoints, so allow some time
 
 export class ApiError extends Error {
