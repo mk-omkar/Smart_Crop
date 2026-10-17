@@ -208,8 +208,8 @@ def create_app(test_config=None):
 
 app = create_app()
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "5000"))
-    debug = os.environ.get("FLASK_DEBUG", "0") == "1"
-    logger.info("Smart Crop Advisor backend running at http://localhost:%s", port)
-    app.run(host="127.0.0.1", port=port, debug=debug)
+if __name__=="__main__":
+    port=int(os.environ.get("PORT","5000"))
+    debug=os.environ.get("FLASK_DEBUG","0")=="1"
+    logger.info("Smart Crop Advisor backend running on port %s",port)
+    app.run(host="0.0.0.0",port=port,debug=debug)

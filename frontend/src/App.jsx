@@ -93,7 +93,7 @@ export default function App() {
 
   const defaults = useMemo(() => deriveDefaults(weather.data), [weather.data]);
 
-  return (
+  return (  
     <>
       <Navbar />
       <main>
